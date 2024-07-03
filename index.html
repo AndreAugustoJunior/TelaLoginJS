@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Login</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="main_frame">
+        <div class="buttons">
+            <button onclick="signIn()" class="in">Entrar</button>
+            <button onclick="signUp()" class="up">Cadrasto</button>
+        </div>
+        <div class="title">Entrar</div>
+        <div class="input_area">
+            <div class="sign_in">
+                <div class="email">
+                    <input type="text"
+                    placeholder="Email:">
+                    <img src="user.jpeg" width="23px">
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Senha:">
+                    <img src="password.jpeg" width="23px">
+                </div>
+                <div class="remember_forgot">
+                    <div class="remember">
+                        <input type="checkbox" id="check">
+                        <label for="check">Lembrar de mim</label>
+                    </div>
+                    <div class="forget">
+                        <a href="#">Esqueceu a senha? </a>
+                    </div>
+                </div>
+                <button class="log">Entrar</button>
+            </div>
+            <div class="sign_up">
+                <div class="email">
+                    <input type="text"
+                    placeholder="Email:">
+                    <img src="user.jpeg" width="23px">
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Senha:">
+                    <img src="password.jpeg" width="23px">
+                </div>
+                <button class="register">Registrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let title = document.querySelector(".title")
+        let frame = document.querySelector(".input_area")
+        let signInButton = document.querySelector(".in")
+        let signUpButton = document.querySelector(".up")
+
+        function signIn(){
+            frame.style.right = "0"
+            signInButton.style.background = "#12af4e"
+            signUpButton.style.background = "transparent"
+            title.innerHTML = "Entrar"
+        }
+
+        function signUp(){
+            frame.style.right = "100%"
+            signUpButton.style.background = "#12af4e"
+            signInButton.style.background = "transparent"
+            title.innerHTML = "Cadastrar"
+        }
+
+    </script>
+
+</body>
+</html>
